@@ -40,7 +40,7 @@ export const UserIcon = () => {
         className={
           isOpen
             ? 'absolute right-0 z-20 w-56 py-2 mt-2 overflow-hidden origin-top-right bg-white rounded-md shadow-xl dark:bg-gray-800 ease-out duration-100 opacity-100 scale-100'
-            : 'absolute right-0 z-20 w-56 py-2 mt-2 overflow-hidden origin-top-right bg-white rounded-md shadow-xl dark:bg-gray-800 ease-out duration-100 opacity-0 scale-90'
+            : 'absolute right-0 z-20 w-56 py-2 mt-2 overflow-hidden origin-top-right bg-white rounded-md shadow-xl dark:bg-gray-800 ease-out duration-100 opacity-0 scale-90 hidden'
         }
       >
         <a
