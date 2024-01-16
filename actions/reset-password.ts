@@ -2,7 +2,9 @@
 import * as z from 'zod';
 
 import { ResetPasswordSchema } from '@/schemas';
-export const login = async (values: z.infer<typeof ResetPasswordSchema>) => {
+export const resetPassword = async (
+  values: z.infer<typeof ResetPasswordSchema>,
+) => {
   const validatedFields = ResetPasswordSchema.safeParse(values);
 
   if (!validatedFields.success) {
