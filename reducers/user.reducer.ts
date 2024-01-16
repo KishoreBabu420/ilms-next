@@ -3,7 +3,7 @@ export const actionTypes = {
   LOGOUT: 'LOGOUT_SUCCESSFUL',
 };
 
-const adminReducer = (state, action) => {
+const adminReducer = (state: any, action: any) => {
   switch (action.type) {
     case actionTypes.SUCCESSFUL:
       return { ...state, userIsInactive: false };
