@@ -1,8 +1,13 @@
+'use client';
+import { useLayoutEffect } from 'react';
 import { Poppins } from 'next/font/google';
 
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { LoginButton } from '@/components/auth/login-button';
+
+import { useAdminGlobalContext } from '@/context/admin.context';
+import { redirect } from 'next/navigation';
 
 const font = Poppins({
   subsets: ['latin'],
@@ -10,6 +15,14 @@ const font = Poppins({
 });
 
 const Home = () => {
+  const { userIsInactive } = useAdminGlobalContext();
+
+  useLayoutEffect(() => {
+    const authState = userIsInactive;
+    if (userIsInactive) {
+      redirect('/login');
+    }
+  }, [userIsInactive]);
   return (
     <main className='flex h-full flex-col items-center justify-center'>
       <div className='space-y-6 text-center'>

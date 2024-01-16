@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
+import { AdminProvider } from '@/context/admin.context';
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -23,7 +25,9 @@ export default function RootLayout({
           sizes='any'
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <AdminProvider>{children}</AdminProvider>
+      </body>
     </html>
   );
 }
