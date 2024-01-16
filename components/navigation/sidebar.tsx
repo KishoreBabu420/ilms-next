@@ -4,7 +4,7 @@ import { menuItems } from '@/constants';
 
 export const Sidebar = () => {
   return (
-    <aside className='w-64 bg-white'>
+    <aside className='w-64 bg-white h-[100vh-4rem]'>
       <div className='h-16 flex items-center justify-center border-b-2'>
         <h2 className='text-2xl font-semibold text-gray-800 '>Dashboard</h2>
       </div>

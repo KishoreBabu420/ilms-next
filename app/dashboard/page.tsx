@@ -1,13 +1,5 @@
-import { Navbar } from '@/components/navigation/navbar';
-import { Sidebar } from '@/components/navigation/sidebar';
-
-const Dashboard = () => {
-  return (
-    <>
-      <Navbar />
-      <Sidebar />
-    </>
-  );
+const Home = () => {
+  return <h1 className='text-4xl font-bold'>Home</h1>;
 };
 
-export default Dashboard;
+export default Home;
