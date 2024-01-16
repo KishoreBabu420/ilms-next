@@ -9,7 +9,7 @@ const initialState = {
 };
 const AdminContext = React.createContext(initialState);
 
-const AdminProvider = ({ children }) => {
+const AdminProvider = ({ children }: { children: React.ReactNode }) => {
   const [state, dispatch] = useReducer(adminReducer, initialState);
 
   const login = () => {

@@ -1,7 +1,7 @@
 import { Navbar } from '@/components/navigation/navbar';
 import { Sidebar } from '@/components/navigation/sidebar';
 
-const Dashboard = ({ children }: { children: React.ReactNode }) => {
+const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Navbar />
@@ -15,4 +15,4 @@ const Dashboard = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default Dashboard;
+export default DashboardLayout;
