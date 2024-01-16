@@ -8,7 +8,7 @@ import Image from 'next/image';
 export const UserIcon = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const logoutHandler = (e) => {};
+  const logoutHandler = () => {};
 
   const toggleHandler = () => {
     setIsOpen(!isOpen);
