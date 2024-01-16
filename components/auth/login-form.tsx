@@ -23,6 +23,7 @@ import { Button } from '../ui/button';
 import { FormError } from '../form-error';
 import { FormSuccess } from '../form-success';
 import { login } from '@/actions/login';
+import { redirect } from 'next/navigation';
 
 export const LoginForm = () => {
   const [isPending, startTransition] = useTransition();
@@ -41,6 +42,7 @@ export const LoginForm = () => {
       login(values).then((data) => {
         setError(data.error);
         setSuccess(data.success);
+        redirect('/dashboard');
       });
     });
   };
