@@ -19,18 +19,7 @@ export const Navbar = () => {
                 />
               </div>
 
-              <div className='md:space-x-6 justify-end items-center ml-auto flex space-x-3'>
-                <div className='justify-center items-center flex relative'>
-                  <Image
-                    src='/assets/user.jpg'
-                    className='object-cover btn- h-9 w-9 rounded-full mr-2 bg-gray-300'
-                    alt='person'
-                    width={50}
-                    height={50}
-                  />
-                  <p className='font-semibold text-sm'>John Doe</p>
-                </div>
-              </div>
+              <UserIcon />
             </div>
           </div>
         </div>

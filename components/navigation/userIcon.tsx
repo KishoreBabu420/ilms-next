@@ -1,16 +1,14 @@
+'use client';
+
 import { useState } from 'react';
 import Link from 'next/link';
 
-import { useAdminGlobalContext } from '../../context/admin.context';
+import Image from 'next/image';
 
-const UserIcon = () => {
+export const UserIcon = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const { logout } = useAdminGlobalContext();
-
-  const logoutHandler = (e) => {
-    logout();
-  };
+  const logoutHandler = (e) => {};
 
   const toggleHandler = () => {
     setIsOpen(!isOpen);
@@ -49,10 +47,12 @@ const UserIcon = () => {
           href='#'
           className='flex items-center p-3 -mt-2 text-sm text-gray-600 transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white'
         >
-          <img
+          <Image
             className='flex-shrink-0 object-cover mx-1 rounded-full w-9 h-9'
-            src='https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+            src='/assets/user.jpg'
             alt='jane avatar'
+            width={50}
+            height={50}
           />
           <div className='mx-1'>
             <h1 className='text-sm font-semibold text-gray-700 dark:text-gray-200'>
@@ -67,7 +67,7 @@ const UserIcon = () => {
         <hr className='border-gray-200 dark:border-gray-700 ' />
 
         <Link
-          to='#'
+          href='#'
           className='block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white'
         >
           view profile
@@ -76,14 +76,14 @@ const UserIcon = () => {
         <hr className='border-gray-200 dark:border-gray-700 ' />
 
         <Link
-          to='#'
+          href='#'
           className='block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white'
         >
           Company profile
         </Link>
 
         <Link
-          to='#'
+          href='#'
           className='block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white'
         >
           Team
@@ -92,7 +92,7 @@ const UserIcon = () => {
         <hr className='border-gray-200 dark:border-gray-700 ' />
 
         <Link
-          to='#'
+          href='#'
           className='block px-4 py-3 text-sm text-gray-600 capitalize transition-colors duration-300 transform dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white'
         >
           Help
@@ -107,5 +107,3 @@ const UserIcon = () => {
     </div>
   );
 };
-
-export default UserIcon;

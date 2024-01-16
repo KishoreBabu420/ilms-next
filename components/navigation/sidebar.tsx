@@ -11,7 +11,10 @@ export const Sidebar = () => {
       <ul>
         {menuItems.map(({ icon, text }) => {
           return (
-            <li className='flex items-center p-6 hover:bg-gray-100 '>
+            <li
+              className='flex items-center p-6 hover:bg-gray-100 '
+              key={text}
+            >
               <Link
                 className='flex items-center space-x-4'
                 href='#'
