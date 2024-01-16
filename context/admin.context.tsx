@@ -5,7 +5,7 @@ import React, { useContext, useReducer } from 'react';
 import adminReducer from '../reducers/user.reducer';
 
 const initialState = {
-  userIsInactive: true,
+  userIsInactive: false,
 };
 const AdminContext = React.createContext(initialState);
 

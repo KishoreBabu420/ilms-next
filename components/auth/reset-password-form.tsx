@@ -36,12 +36,12 @@ export const ResetPasswordForm = () => {
   });
 
   const onSubmit = (values: z.infer<typeof ResetPasswordSchema>) => {
-    startTransition(() => {
-      login(values).then((data) => {
-        setError(data.error);
-        setSuccess(data.success);
-      });
-    });
+    // startTransition(() => {
+    //   login(values).then((data) => {
+    //     setError(data.error);
+    //     setSuccess(data.success);
+    //   });
+    // });
   };
   return (
     <CardWrapper
