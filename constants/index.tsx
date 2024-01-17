@@ -9,6 +9,12 @@ import { MdSubtitles } from 'react-icons/md';
 import { FaMountainCity } from 'react-icons/fa6';
 import { TbBuildingEstate } from 'react-icons/tb';
 
+import { MdLanguage } from 'react-icons/md';
+import { CgAttribution } from 'react-icons/cg';
+import { FaUserAstronaut } from 'react-icons/fa';
+
+import { MdEvent } from 'react-icons/md';
+
 const menuItems = [
   {
     icon: (
@@ -82,6 +88,50 @@ const menuItems = [
     ),
     text: 'State',
     href: '/dashboard/state',
+  },
+
+  {
+    icon: (
+      <MdLanguage
+        size={25}
+        className='h-5 w-5 text-gray-500 dark:text-gray-400'
+      />
+    ),
+    text: 'Language',
+    href: '/dashboard/language',
+  },
+
+  {
+    icon: (
+      <CgAttribution
+        size={25}
+        className='h-5 w-5 text-gray-500 dark:text-gray-400'
+      />
+    ),
+    text: 'Attributes',
+    href: '/dashboard/attributes',
+  },
+
+  {
+    icon: (
+      <FaUserAstronaut
+        size={25}
+        className='h-5 w-5 text-gray-500 dark:text-gray-400'
+      />
+    ),
+    text: 'User Log',
+    href: '/dashboard/user-log',
+  },
+
+  {
+    icon: (
+      <MdEvent
+        size={25}
+        className='h-5 w-5 text-gray-500 dark:text-gray-400'
+      />
+    ),
+    text: 'Event Log',
+    href: '/dashboard/event-log',
   },
 ];
 
