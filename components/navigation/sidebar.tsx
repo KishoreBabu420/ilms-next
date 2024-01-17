@@ -5,9 +5,9 @@ import { menuItems } from '@/constants';
 export const Sidebar = () => {
   return (
     <aside className='w-48 bg-white max-h-[100vh-4rem] '>
-      <div className='h-12 flex items-center justify-center border-b-2'>
+      {/* <div className='h-12 flex items-center justify-center border-b-2'>
         <h2 className='text-2xl font-semibold text-gray-800 '>Dashboard</h2>
-      </div>
+      </div> */}
       <ul>
         {menuItems.map(({ icon, text, href }) => {
           return (

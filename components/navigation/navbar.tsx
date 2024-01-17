@@ -14,8 +14,8 @@ export const Navbar = () => {
                   src='/assets/gmmco.jpg'
                   className='block btn- h-8 w-auto'
                   alt='logo'
-                  width={120}
-                  height={40}
+                  width={187}
+                  height={75}
                 />
               </div>
 
