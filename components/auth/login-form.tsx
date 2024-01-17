@@ -23,7 +23,7 @@ import { Button } from '../ui/button';
 import { FormError } from '../form-error';
 import { FormSuccess } from '../form-success';
 import { login } from '@/actions/login';
-import { redirect } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 export const LoginForm = () => {
   const [isPending, startTransition] = useTransition();
@@ -37,14 +37,17 @@ export const LoginForm = () => {
     },
   });
 
+  const router = useRouter();
+
   const onSubmit = (values: z.infer<typeof LoginSchema>) => {
     startTransition(() => {
       login(values).then((data) => {
         setError(data.error);
         setSuccess(data.success);
-        redirect('/dashboard');
       });
     });
+
+    router.push('/dashboard');
   };
   return (
     <CardWrapper
