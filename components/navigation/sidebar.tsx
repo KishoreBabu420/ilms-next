@@ -4,7 +4,7 @@ import { menuItems } from '@/constants';
 
 export const Sidebar = () => {
   return (
-    <aside className='w-48 bg-white max-h-[100vh-4rem] '>
+    <aside className='w-48 bg-white max-h-[100vh-4rem] border-r-2'>
       {/* <div className='h-12 flex items-center justify-center border-b-2'>
         <h2 className='text-2xl font-semibold text-gray-800 '>Dashboard</h2>
       </div> */}
@@ -12,7 +12,7 @@ export const Sidebar = () => {
         {menuItems.map(({ icon, text, href }) => {
           return (
             <li
-              className='flex items-center px-6 py-5 hover:bg-gray-100 '
+              className='flex items-center px-6 py-3 hover:bg-gray-100 '
               key={text}
             >
               <Link

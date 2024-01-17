@@ -5,9 +5,9 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Navbar />
-      <div className='flex gap-4'>
+      <div className='flex gap-1'>
         <Sidebar />
-        <div className=' flex items-center justify-center w-[calc(100%-12rem)] h-[calc(100vh-4.5rem)]'>
+        <div className=' flex items-start justify-center w-[calc(100%-12rem)] h-[calc(100vh-4.5rem)]'>
           {children}
         </div>
       </div>

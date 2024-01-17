@@ -26,7 +26,7 @@ export type Users = {
 export const columns: ColumnDef<Users>[] = [
   {
     accessorKey: 'username',
-    header: 'Module Name',
+    header: 'Username',
   },
   {
     accessorKey: 'emailId',

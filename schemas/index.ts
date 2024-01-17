@@ -25,8 +25,8 @@ export const RegisterSchema = z.object({
 //Dashboard Schemas
 
 export const AdminSchema = z.object({
-  id: z.string().min(8).max(8),
-  username: z.string().min(8).max(12),
+  id: z.string(),
+  username: z.string(),
   phoneNumber: z.string(),
   emailId: z.string().email(),
   role: z.enum(['admin', 'user', 'guest']),
