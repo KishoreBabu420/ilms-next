@@ -51,10 +51,11 @@ export const Form = () => {
         {steps.map((step) => (
           <Step
             key={step.id}
-            number={step.id}
             title={step.title}
             active={step.active}
-          />
+          >
+            {step.id}
+          </Step>
         ))}
       </div>
       <div className='flex flex-col justify-between w-3/4 rounded-2xl  bg-white'>
