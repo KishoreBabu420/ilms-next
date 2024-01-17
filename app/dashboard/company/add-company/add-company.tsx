@@ -65,9 +65,9 @@ export const Form = () => {
         </div>
         <div className='flex justify-between w-full my-4'>
           <Button
-            variant='outline'
+            variant='destructive'
             onClick={prevStep}
-            className={`font-medium text-[#9699ab] select-none cursor-pointer transition duration-100 hover:text-[#02295a] ${goBackVisible}`}
+            className={`font-medium text-gray-200 select-none cursor-pointer transition duration-100 hover:text-[#02295a] ${goBackVisible}`}
           >
             Go back
           </Button>
@@ -80,9 +80,9 @@ export const Form = () => {
             </Button>
           ) : (
             <Button
-              variant='secondary'
+              variant='default'
               onClick={nextStep}
-              className='font-medium bg-[#02295a] select-none text-white py-3 px-5 rounded-lg cursor-pointer transition duration-100 hover:opacity-90'
+              className='font-medium  select-none text-white py-3 px-5 rounded-lg '
             >
               Next Step
             </Button>

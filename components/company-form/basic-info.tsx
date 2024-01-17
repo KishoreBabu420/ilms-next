@@ -58,6 +58,22 @@ export const BasicInfo = () => {
           <div className='grid grid-cols-3 gap-2 justify-between items-center'>
             <FormField
               control={form.control}
+              name='companyId'
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Company Id</FormLabel>
+                  <FormControl>
+                    <Input
+                      placeholder='Company Id'
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
               name='companyName'
               render={({ field }) => (
                 <FormItem>
@@ -89,7 +105,9 @@ export const BasicInfo = () => {
                 </FormItem>
               )}
             />
+          </div>
 
+          <div className='grid grid-cols-3 gap-2 justify-between items-center'>
             <FormField
               control={form.control}
               name='companyAdminEmail'
@@ -107,9 +125,6 @@ export const BasicInfo = () => {
                 </FormItem>
               )}
             />
-          </div>
-
-          <div className='grid grid-cols-3 gap-2 justify-between items-center'>
             <FormField
               control={form.control}
               name='companyAdminPhone'
@@ -144,7 +159,9 @@ export const BasicInfo = () => {
                 </FormItem>
               )}
             />
+          </div>
 
+          <div className='grid grid-cols-1 gap-2 justify-between items-center'>
             <FormField
               control={form.control}
               name='companyAddress'
@@ -164,6 +181,7 @@ export const BasicInfo = () => {
             />
           </div>
 
+          <p className='text-[#1a1a1c] text-sm font-bold'>Brand Details</p>
           <div className='grid grid-cols-3 gap-2 justify-between items-center'>
             <FormField
               control={form.control}
@@ -218,7 +236,7 @@ export const BasicInfo = () => {
               )}
             />
           </div>
-
+          <p className='text-[#1a1a1c] text-sm font-bold'>Database Details</p>
           <div className='grid grid-cols-3 gap-2 justify-between items-center'>
             <FormField
               control={form.control}
@@ -274,34 +292,18 @@ export const BasicInfo = () => {
             />
           </div>
 
-          <div className='grid grid-cols-3 gap-2 justify-between items-center'>
-            <FormField
-              control={form.control}
-              name='companyId'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Company Id</FormLabel>
-                  <FormControl>
-                    <Input
-                      placeholder='Company Id'
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
+          <div className='grid grid-cols-2 gap-2 justify-between items-center'>
             <FormField
               control={form.control}
               name='startDate'
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Database Password</FormLabel>
+                  <FormLabel>Start Date</FormLabel>
                   <FormControl>
                     <Input
                       type='text'
                       {...field}
+                      placeholder='01-01-2024'
                     />
                   </FormControl>
                   <FormMessage />
@@ -318,7 +320,7 @@ export const BasicInfo = () => {
                   <FormControl>
                     <Input
                       type='text'
-                      placeholder='End Date'
+                      placeholder='01-01-2024'
                       {...field}
                     />
                   </FormControl>
