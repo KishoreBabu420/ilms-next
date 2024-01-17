@@ -52,7 +52,7 @@ export const AddAdmin = () => {
       >
         <FormField
           control={form.control}
-          name='moduleName'
+          name='subModuleName'
           render={({ field }) => (
             <FormItem>
               <FormLabel>Sub Module Name</FormLabel>
