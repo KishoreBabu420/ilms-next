@@ -4,6 +4,16 @@ import { ColumnDef } from '@tanstack/react-table';
 
 import { Button } from '@/components/ui/button';
 
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog';
+import { EditAttribute } from './edit-attribute';
+
 export type Languages = {
   id: string;
   attribute: string;
@@ -29,7 +39,26 @@ export const columns: ColumnDef<Languages>[] = [
     cell: ({ row }) => {
       const language = row.original;
       console.log(language);
-      return <Button variant='default'>Edit</Button>;
+      return (
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button
+              variant='outline'
+              className='bg-blue-700 hover:bg-blue-600 text-white hover:text-white'
+            >
+              <span>Edit</span>
+            </Button>
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Edit Attribute</DialogTitle>
+              <DialogDescription>
+                <EditAttribute />
+              </DialogDescription>
+            </DialogHeader>
+          </DialogContent>
+        </Dialog>
+      );
     },
   },
 ];

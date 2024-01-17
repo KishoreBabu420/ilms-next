@@ -1,7 +1,7 @@
-import { Users, columns } from './columns';
+import { Languages, columns } from './columns';
 import { DataTable } from './data-table';
 
-async function getData(): Promise<Users[]> {
+async function getData(): Promise<Languages[]> {
   // Fetch data from your API here.
   return [
     {
