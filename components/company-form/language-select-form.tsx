@@ -88,6 +88,10 @@ export function LanguageSelectForm() {
                           key={item.id}
                           className='flex flex-row items-center space-x-3 space-y-0'
                         >
+                          <FormLabel className='font-normal text-xl'>
+                            {item.label}
+                          </FormLabel>
+
                           <FormControl>
                             <Checkbox
                               checked={field.value?.includes(item.id)}
@@ -102,9 +106,6 @@ export function LanguageSelectForm() {
                               }}
                             />
                           </FormControl>
-                          <FormLabel className='font-normal text-xl'>
-                            {item.label}
-                          </FormLabel>
                         </FormItem>
                       );
                     }}

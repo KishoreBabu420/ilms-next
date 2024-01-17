@@ -82,3 +82,8 @@ export const languageSchema = z.object({
   Description: z.string(),
   activeStatus: z.boolean(),
 });
+
+export const attributeSchema = z.object({
+  attributeId: z.string(),
+  attributeName: z.string(),
+});

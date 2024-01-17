@@ -1,4 +1,10 @@
-const Step = ({ number, title, active }) => {
+interface StepProps {
+  number: String;
+  title: String;
+  active: Boolean;
+}
+
+const Step = ({ number, title, active }: StepProps) => {
   return (
     <div className='flex text-left space-x-7 text-white my-4'>
       <div
