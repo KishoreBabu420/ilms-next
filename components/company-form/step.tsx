@@ -1,5 +1,5 @@
 interface StepProps {
-  number: String;
+  number: Number;
   title: String;
   active: Boolean;
 }
