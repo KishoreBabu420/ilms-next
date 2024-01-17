@@ -35,8 +35,8 @@ export const BasicInfo = () => {
       companyDbPassword: '',
       languageId: '',
       companyId: '',
-      startDate: new Date(),
-      endDate: new Date(),
+      startDate: '',
+      endDate: '',
     },
   });
 
@@ -300,7 +300,7 @@ export const BasicInfo = () => {
                   <FormLabel>Database Password</FormLabel>
                   <FormControl>
                     <Input
-                      type='date'
+                      type='text'
                       {...field}
                     />
                   </FormControl>
@@ -317,7 +317,7 @@ export const BasicInfo = () => {
                   <FormLabel>End Date</FormLabel>
                   <FormControl>
                     <Input
-                      type='date'
+                      type='text'
                       placeholder='End Date'
                       {...field}
                     />

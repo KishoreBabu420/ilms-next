@@ -47,8 +47,8 @@ export const CompanySchema = z.object({
   companyDbPassword: z.string(),
   languageId: z.string(),
   companyId: z.string(),
-  startDate: z.date(),
-  endDate: z.date(),
+  startDate: z.string(),
+  endDate: z.string(),
 });
 
 export const mainModuleSchema = z.object({
