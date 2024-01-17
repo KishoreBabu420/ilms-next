@@ -49,7 +49,7 @@ const menuItems = [
       />
     ),
     text: 'Main Module',
-    href: '/dashboard/admin',
+    href: '/dashboard/main-module',
   },
   {
     icon: (
