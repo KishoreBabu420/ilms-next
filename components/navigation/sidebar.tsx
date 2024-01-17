@@ -9,7 +9,7 @@ export const Sidebar = () => {
         <h2 className='text-2xl font-semibold text-gray-800 '>Dashboard</h2>
       </div>
       <ul>
-        {menuItems.map(({ icon, text }) => {
+        {menuItems.map(({ icon, text, href }) => {
           return (
             <li
               className='flex items-center p-6 hover:bg-gray-100 '
@@ -17,7 +17,7 @@ export const Sidebar = () => {
             >
               <Link
                 className='flex items-center space-x-4'
-                href='#'
+                href={href}
               >
                 {icon}
                 <span className='text-md font-medium'>{text}</span>

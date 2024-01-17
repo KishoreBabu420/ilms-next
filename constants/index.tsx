@@ -18,6 +18,7 @@ const menuItems = [
       />
     ),
     text: 'Home',
+    href: '/dashboard',
   },
   {
     icon: (
@@ -27,6 +28,7 @@ const menuItems = [
       />
     ),
     text: 'Admin',
+    href: '/dashboard/admin',
   },
   {
     icon: (
@@ -36,6 +38,7 @@ const menuItems = [
       />
     ),
     text: 'Company',
+    href: '/dashboard/company',
   },
 
   {
@@ -46,6 +49,7 @@ const menuItems = [
       />
     ),
     text: 'Main Module',
+    href: '/dashboard/admin',
   },
   {
     icon: (
@@ -55,6 +59,7 @@ const menuItems = [
       />
     ),
     text: 'Sub Module',
+    href: '/dashboard/sub-module',
   },
 
   {
@@ -65,6 +70,7 @@ const menuItems = [
       />
     ),
     text: 'Country',
+    href: '/dashboard/country',
   },
 
   {
@@ -75,6 +81,7 @@ const menuItems = [
       />
     ),
     text: 'State',
+    href: '/dashboard/state',
   },
 ];
 
