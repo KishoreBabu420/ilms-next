@@ -55,7 +55,7 @@ export const BasicInfo = () => {
           onSubmit={form.handleSubmit(onSubmit)}
           className='space-y-8 flex flex-col'
         >
-          <div className='grid grid-cols-3 gap-2 justify-between items-center'>
+          <div className='grid grid-cols-1 gap-2 justify-between items-center'>
             <FormField
               control={form.control}
               name='companyId'
@@ -107,7 +107,7 @@ export const BasicInfo = () => {
             />
           </div>
 
-          <div className='grid grid-cols-3 gap-2 justify-between items-center'>
+          <div className='grid grid-cols-1 gap-2 justify-between items-center'>
             <FormField
               control={form.control}
               name='companyAdminEmail'
@@ -181,8 +181,46 @@ export const BasicInfo = () => {
             />
           </div>
 
+          <div className='grid grid-cols-1 gap-2 justify-between items-center'>
+            <FormField
+              control={form.control}
+              name='startDate'
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Start Date</FormLabel>
+                  <FormControl>
+                    <Input
+                      type='text'
+                      {...field}
+                      placeholder='01-01-2024'
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+
+            <FormField
+              control={form.control}
+              name='endDate'
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>End Date</FormLabel>
+                  <FormControl>
+                    <Input
+                      type='text'
+                      placeholder='01-01-2024'
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
+
           <p className='text-[#1a1a1c] text-sm font-bold'>Brand Details</p>
-          <div className='grid grid-cols-3 gap-2 justify-between items-center'>
+          <div className='grid grid-cols-1 gap-2 justify-between items-center'>
             <FormField
               control={form.control}
               name='companyLogo'
@@ -237,7 +275,7 @@ export const BasicInfo = () => {
             />
           </div>
           <p className='text-[#1a1a1c] text-sm font-bold'>Database Details</p>
-          <div className='grid grid-cols-3 gap-2 justify-between items-center'>
+          <div className='grid grid-cols-1 gap-2 justify-between items-center'>
             <FormField
               control={form.control}
               name='companyDbName'
@@ -283,44 +321,6 @@ export const BasicInfo = () => {
                     <Input
                       type='text'
                       placeholder='Language Id'
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-
-          <div className='grid grid-cols-2 gap-2 justify-between items-center'>
-            <FormField
-              control={form.control}
-              name='startDate'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Start Date</FormLabel>
-                  <FormControl>
-                    <Input
-                      type='text'
-                      {...field}
-                      placeholder='01-01-2024'
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            <FormField
-              control={form.control}
-              name='endDate'
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>End Date</FormLabel>
-                  <FormControl>
-                    <Input
-                      type='text'
-                      placeholder='01-01-2024'
                       {...field}
                     />
                   </FormControl>

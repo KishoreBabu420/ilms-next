@@ -46,7 +46,7 @@ export const Form = () => {
   };
 
   return (
-    <div className=' w-full rounded-xl p-4 pr-8 flex justify-between items-center'>
+    <div className=' w-full rounded-xl p-4 pr-8 flex justify-between items-start'>
       <div className='w-1/4 p-8 flex flex-col m-8 gap-12 rounded-2xl bg-slate-200'>
         {steps.map((step) => (
           <Step

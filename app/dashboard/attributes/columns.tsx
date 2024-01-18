@@ -37,8 +37,7 @@ export const columns: ColumnDef<Languages>[] = [
   {
     id: 'actions',
     cell: ({ row }) => {
-      const language = row.original;
-      console.log(language);
+      const { id, attribute } = row.original;
       return (
         <Dialog>
           <DialogTrigger asChild>
@@ -53,7 +52,10 @@ export const columns: ColumnDef<Languages>[] = [
             <DialogHeader>
               <DialogTitle>Edit Attribute</DialogTitle>
               <DialogDescription>
-                <EditAttribute />
+                <EditAttribute
+                  attributeId={id}
+                  attributeName={attribute}
+                />
               </DialogDescription>
             </DialogHeader>
           </DialogContent>
