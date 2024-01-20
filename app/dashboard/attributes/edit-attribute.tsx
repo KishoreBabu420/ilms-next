@@ -93,30 +93,93 @@ export const EditAttribute = ({
               <TableRow>
                 <TableHead className='w-[100px]'>#</TableHead>
                 <TableHead>Language</TableHead>
-                <TableHead className='text-right'>Translated Value</TableHead>
+                <TableHead className='text-center'>Translated Value</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
               <TableRow>
                 <TableCell className='font-medium'>1</TableCell>
                 <TableCell>Tamil</TableCell>
-                <TableCell className='text-right'>{attributeName}</TableCell>
-              </TableRow>
-
-              <TableRow>
-                <TableCell className='font-medium'>2</TableCell>
-                <TableCell>Telugu</TableCell>
-                <TableCell className='text-right'>{attributeName}</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className='font-medium'>3</TableCell>
-                <TableCell>Malayalam</TableCell>
-                <TableCell className='text-right'>{attributeName}</TableCell>
+                <TableCell>
+                  <FormField
+                    control={form.control}
+                    name='attributeNameTamil'
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Input
+                            placeholder={attributeName}
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </TableCell>
               </TableRow>
               <TableRow>
                 <TableCell className='font-medium'>4</TableCell>
                 <TableCell>Hindi</TableCell>
-                <TableCell className='text-right'>{attributeName}</TableCell>
+                <TableCell>
+                  <FormField
+                    control={form.control}
+                    name='attributeNameTelugu'
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Input
+                            placeholder={attributeName}
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className='font-medium'>3</TableCell>
+                <TableCell>Malayalam</TableCell>
+                <TableCell>
+                  <FormField
+                    control={form.control}
+                    name='attributeNameMalayalam'
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Input
+                            placeholder={attributeName}
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell className='font-medium'>4</TableCell>
+                <TableCell>Hindi</TableCell>
+                <TableCell>
+                  <FormField
+                    control={form.control}
+                    name='attributeNameKannada'
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <Input
+                            placeholder={attributeName}
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </TableCell>
               </TableRow>
             </TableBody>
           </Table>
@@ -124,7 +187,7 @@ export const EditAttribute = ({
             type='submit'
             className='block w-full'
           >
-            Edit
+            Edit Attribute
           </Button>
         </form>
       </Form>

@@ -18,8 +18,17 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 
-import { Checkbox } from '@/components/ui/checkbox';
 import { Button } from '@/components/ui/button';
+
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table';
 
 export const AddAttribute = () => {
   const form = useForm<z.infer<typeof attributeSchema>>({
@@ -56,7 +65,108 @@ export const AddAttribute = () => {
             </FormItem>
           )}
         />
-        <Button type='submit'>Submit</Button>
+
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHead className='w-[100px]'>#</TableHead>
+              <TableHead>Language</TableHead>
+              <TableHead className='text-center'>Translated Value</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            <TableRow>
+              <TableCell className='font-medium'>1</TableCell>
+              <TableCell>Tamil</TableCell>
+              <TableCell>
+                <FormField
+                  control={form.control}
+                  name='attributeNameTamil'
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input
+                          placeholder='add attribute'
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell className='font-medium'>4</TableCell>
+              <TableCell>Hindi</TableCell>
+              <TableCell>
+                <FormField
+                  control={form.control}
+                  name='attributeNameTelugu'
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input
+                          placeholder='add attribute'
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell className='font-medium'>3</TableCell>
+              <TableCell>Malayalam</TableCell>
+              <TableCell>
+                <FormField
+                  control={form.control}
+                  name='attributeNameMalayalam'
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input
+                          placeholder='add attribute'
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell className='font-medium'>4</TableCell>
+              <TableCell>Hindi</TableCell>
+              <TableCell>
+                <FormField
+                  control={form.control}
+                  name='attributeNameKannada'
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input
+                          placeholder='add attribute'
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+        <Button
+          type='submit'
+          className='block w-full'
+        >
+          Add Attribute
+        </Button>
       </form>
     </Form>
   );

@@ -86,4 +86,8 @@ export const languageSchema = z.object({
 export const attributeSchema = z.object({
   attributeId: z.string(),
   attributeName: z.string(),
+  attributeNameTelugu: z.string(),
+  attributeNameTamil: z.string(),
+  attributeNameMalayalam: z.string(),
+  attributeNameKannada: z.string(),
 });
