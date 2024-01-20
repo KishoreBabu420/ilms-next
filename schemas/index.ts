@@ -77,9 +77,8 @@ export const stateSchema = z.object({
 });
 
 export const languageSchema = z.object({
+  id: z.string(),
   languageName: z.string(),
-  languageCode: z.string(),
-  Description: z.string(),
   activeStatus: z.boolean(),
 });
 
